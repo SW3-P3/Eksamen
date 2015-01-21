@@ -1,0 +1,92 @@
+\section{Udvikling af programmet}
+%\subsection{Udviklingsprocess}
+%\begin{frame}{Udviklingsprocess}
+%	\begin{itemize}
+%		\item Forskellige metoder
+%			\begin{itemize}
+%				\item Test Driven Development
+%				\item Agile Programering
+%				\item Pair Programming
+%			\end{itemize}
+%		\item Forskellen mellem den reele udvikling og den ønskede.
+%	\end{itemize}
+%\end{frame}
+\input{slides/MarcUndervisning.tex}
+
+\subsection{Produktkrav}
+\begin{frame}{Produktkrav}
+
+\begin{itemize}
+	\item Produktkrav er en række funktionelle krav, som danner baggrund for selve programmet.
+	\item User stories, fra agil systemudvikling.
+\end{itemize}
+\end{frame}
+
+\subsubsection{User stories}
+\begin{frame}{User stories}
+``Som en \textbf{<rolle>} kan jeg \textbf{<mål/ønske>} [så jeg kan \textbf{<fordel>}]'' \newline
+
+
+% Vores indeholder ingen opfyldelses kriterier, skal dette kommenteres?
+\begin{itemize}
+\item<2-7>[] \textbf{Udvalgte user stories:}
+	\item<2-2,7> ``Som en \textbf{bruger} kan jeg reservere både.''
+	\item<3-3,7> ``Som en \textbf{bruger} kan jeg ændre eller slette mine reservationer hvis jeg ombestemmer mig.''
+	\item<4-4,7> ``Som en \textbf{elev} kan jeg se informationer omkring sejlerskolen så jeg kan følge mine fremskridt, se fremtidige lektioner osv.''
+	\item<5-5,7> ``Som en \textbf{underviser} kan jeg se og ændre brugers fremskridt i sejlerskolen så brugerne bliver opdateret.''
+	\item<6-6,7> ``Som \textbf{administrator} vil jeg være i stand til at oprette/fjerne/redigere begivenheder.''
+\end{itemize}
+\end{frame}
+
+
+\subsubsection{Prioriterede krav}
+\begin{frame}{Prioriterede krav}
+\textbf{Overordnedne krav i prioriteret rækkefølge:}
+\begin{enumerate}
+  \item<+-> Medlemshåndtering
+  \item<+-> Brugerlogin
+  \item<+-> Undervisningsorganisering 
+  \item<+-> Bådreservation
+  \item<+-> Logbog
+  \item<+-> Begivenhedsadministration og visning.
+\end{enumerate}
+\end{frame}
+
+\subsection{Programopbygning}
+\begin{frame}{Programopbygning}
+	\begin{figure}[h]
+	\centering
+	\tikzstyle{lille} = [rectangle, minimum width=2cm, minimum height=1.0cm,text centered, draw=black, fill=blue!30]
+	\tikzstyle{invi} = [draw, rectangle, minimum height=2cm, minimum width=2cm]
+	\tikzstyle{line} = [draw]
+	\tikzstyle{arrow} = [thick,->,>=stealth]
+	\begin{tikzpicture}[node distance = 1.5cm]
+	%noderne (objekterne) laves
+	\node (uixaml) [lille] {UI XAML};
+	\node (cb) [lille, below of=uixaml] {CodeBehind};
+	\node (invi1) [invi,draw=none,below of=cb] {};
+	\node (model) [lille, below of=invi1] {Model};
+	\node (idal) [lille, right of=invi1] {IDal};
+	\node (sqldal) [lille, right=0.5cm of idal] {SQLite Dal};
+	\node (efdal) [lille, below of=sqldal] {EF Dal};
+	\node (sql) [lille, right=0.5cm of sqldal] {SQLite};
+	\node (ef) [lille, below of=sql,align=center] {Entity\\ Framework};
+	\node (mockdal) [lille, above of=sqldal] {Mock Dal};
+
+	%pointers laves
+	\draw [line] (uixaml) -- (cb);
+	\draw [line] (cb) -| (idal);
+	\draw [dashed] (cb)-- (model);
+	\draw [line] (model) -| (idal);
+	\draw [line] (idal) -- (sqldal);
+	\draw [line] (idal) to [bend right] (efdal);
+	\draw [line] (sqldal) -- (sql);
+	\draw [line] (efdal) -- (ef);
+	\draw [line] (idal) to [bend left] (mockdal);
+	\draw [line] (mockdal) to [bend left] (sql);
+	\end{tikzpicture}
+	
+	\label{img:Program_flow}
+	\end{figure}
+	Skematisk sammenhæng over programmets struktur.
+\end{frame}

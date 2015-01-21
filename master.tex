@@ -1,0 +1,76 @@
+% !TeX spellcheck = da_DK
+% Setup document class.
+%  This will always be the beamer class, but depending on the use of notes,
+%  it can be annotated with the option [notes] or  [notes=only], depending
+%  on whether notes should be included, or should be the only thing in
+%  the document.
+\documentclass{beamer}
+
+% Setup theme.
+%\input{preamble/simpletheme.tex}
+\input{preamble/regulartheme.tex}
+
+
+% Import preamble
+\input{preamble/preamble.tex}
+
+% Additional settings for boxes
+\setbeamercolor{headerCol}{fg=black,bg=lightgray}
+\setbeamercolor{bodyCol}{fg=white,bg=gray}
+\setbeamercovered{transparent=20}
+
+% Define document stuff
+\title[ProjectFood]{Udvikling af applikationer fra brugere til data, algoritmer og test og tilbage igen}
+\subtitle[Eksamen]{Eksamen}
+\author[DS304E14]{Gruppe DS304E14}
+\date{26. januar 2015}
+
+\institute[
+%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
+Software\\
+Aalborg Universitet\\
+Danmark
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the title page
+  Software\\
+  Aalborg Universitet\\
+  Danmark
+  
+  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+% Specify a logo on the titlepage (you can specify additional logos an include them in 
+% institute command below
+\pgfdeclareimage[height=1.5cm]{titlepagelogo}{AAUgraphics/aau_logo_new} % placed on the title page
+%\pgfdeclareimage[height=1.5cm]{titlepagelogo2}{graphics/aau_logo_new} % placed on the title page
+\titlegraphic{% is placed on the bottom of the title page
+  \pgfuseimage{titlepagelogo}
+  %  \hspace{1cm}\pgfuseimage{titlepagelogo2}
+}
+
+
+\begin{document}
+
+{\aauwavesbg
+  \begin{frame}[plain,noframenumbering]
+    \titlepage
+  \end{frame}}
+
+% ==================== SUBJECTS ======================
+%\input{slides/nikolaj.tex}
+%\input{slides/marc.tex}
+\input{slides/troels.tex}
+%\input{slides/tristan.tex}
+%\input{slides/soeren.tex}
+%\input{slides/forbedringer1.tex}
+%\input{slides/Diskussion.tex}
+%\input{slides/procesanalyse.tex}
+% ====================================================
+
+% Final slide
+{\aauwavesbg
+  \begin{frame}[plain,noframenumbering]
+    \finalpage{\texttt{throw new PresentationIsOverException();}}
+  \end{frame}}
+
+\end{document}

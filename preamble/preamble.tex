@@ -1,0 +1,82 @@
+%%% Initial things %%%
+% Increase number of dimen registers
+\usepackage{etex}
+% Fix various issues with LaTeX2e
+\usepackage{fixltx2e}
+% Font package
+\usepackage{fourier}
+
+
+%%% Translations and character encodings %%%
+% Enable use of several characters, including æ, ø and å
+\usepackage[utf8]{inputenc}
+% Danish language
+\usepackage[danish]{babel}
+% Use PostScript fonts instead of bitmap ones. Also does other stuff.
+\usepackage[T1]{fontenc}
+% Various LaTeX symbols
+\usepackage{latexsym}
+% Wider selection of colours
+\usepackage{xcolor}
+% Improved element justification
+\usepackage{ragged2e}
+% Font improvements
+\usepackage{fix-cm}
+% Enables various forms of lines, like double-underlining (\uuline{})
+\usepackage{ulem}
+% Sets the tolerance for distance between words, determining when to hyphenate.
+\pretolerance=2500
+
+
+%%% Figures and tables (Floats) %%%
+% Enable multi-rows and -columns
+\usepackage{multirow}
+\usepackage{multicol}
+% Double, horizontal lines
+\usepackage{hhline}
+% Enables coloured tables
+\usepackage{colortbl}
+% Prettier tables
+\usepackage{booktabs}
+
+
+%%% Mathematic formulas %%%
+% AMS math
+\usepackage{amsmath}
+\usepackage{amssymb}
+% Extra fonts (for math, I think)
+\usepackage{stmaryrd}
+% Access text symbols
+\usepackage{textcomp}
+% Extend AMS
+\usepackage{mathtools}
+\usepackage{cancel}
+
+
+%%% Graphics %%%
+% Various image-commands
+\usepackage{eso-pic}
+% Use JPEG and PNG images
+\usepackage{graphicx}
+
+
+%%% References, bibtex and URLs %%%
+% Post URLs. Allows breaking at hyphens to help avoid long links.
+\usepackage{url}
+% Better cross references
+\usepackage[danish]{varioref}
+% Define a new 'leo' style for URL package, that will use a smaller font
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}
+}
+\makeatother
+% And of course, use this new style
+\urlstyle{leo}
+
+\hypersetup{pdfstartview={Fit}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Flowchart
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
