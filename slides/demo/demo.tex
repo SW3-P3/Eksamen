@@ -1,16 +1,15 @@
 \section{Demonstration}
-
 \begin{frame}{Indhold}
     \begin{itemize}
         \item Typisk workflow
         \item Implementering
+        \item Mobil udgave 
         \begin{itemize}
 	    	\item Indkøbslister
 	    	\item Overvågningsliste
 	    	\item Tilbud
 	    	\item Opskrifter
-        \end{itemize}
-        \item Mobil udgave    
+        \end{itemize}   
     \end{itemize}
 \end{frame}
 
@@ -24,7 +23,9 @@
 	\href{http://james:8080}{Demonstration af ProjectFood}
 \end{frame}
 
-\begin{frame}{Implementering}
+%%%% Implementering
+\section{Implementering}
+\begin{frame}{Indhold}
 	\begin{itemize}
 	\item Brugerens oplevelse
 	\vspace{20pt}
@@ -34,51 +35,64 @@
 	\end{itemize}	
 \end{frame}
 
-% Start - Indkøbslister
-\begin{frame}{Indkøbslister}
+%% Model
+\begin{frame}{Implementering}
 	\framesubtitle{Model}
 	\textbf{Indkøbslister} \texttt{ShoppingList.cs}
 	\lstinputlisting{code/model/ShoppingList.cs}	
 \end{frame}
-\begin{frame}{Indkøbslister}
+\begin{frame}{Implementering}
 	\framesubtitle{Model}	
 	\textbf{Varer på indkøbslister} \texttt{Item.cs}
 	\lstinputlisting{code/model/Item.cs}	
 \end{frame}
-
-\begin{frame}{Indkøbslister}
-	\framesubtitle{Controller}
-	\begin{itemize}
-		\item CRUD - \texttt{Create()}, \texttt{Index()} og \texttt{Details()}, \texttt{Edit()}, \texttt{Delete()}
-		\vspace{15pt}
-		\item Tilføje varer - \texttt{AddItem()}
-		\item Slette varer - \texttt{RemoveItem()}
-	\end{itemize}
-\end{frame}
-% Slut - Indkøbslister
-
-% Start - Overvågningsliste
-\begin{frame}{Overvågningsliste}
+\begin{frame}{Implementering}
 	\framesubtitle{Model}
+	\textbf{Overvågningsliste}
 	\begin{itemize}
 		\item Simpel implementering
 		\item Specialiseret indkøbsliste
-		\item Genkendes på titel - \texttt{\_watchList}
+		\item Genkendes på titel  \texttt{\_watchList}
 	\end{itemize}
 \end{frame}
-% Slut - Overvågningsliste
-
-% Start - Tilbud
-\begin{frame}{Tilbud}
+\begin{frame}{Implementering}
 	\framesubtitle{Model}
-	\texttt{Offer.cs}
+	\textbf{Tilbud} \texttt{Offer.cs}
 	\lstinputlisting{code/model/Offer.cs}	
 \end{frame}
-% Slut - Tilbud
-% Start - Opskrifter
-\begin{frame}{Opskrifter}
+\begin{frame}{Implementering}
 	\framesubtitle{Model}
-	\texttt{Recipe.cs}
+	\textbf{Opskrifter} \texttt{Recipe.cs}
 	\lstinputlisting{code/model/Recipe.cs}	
 \end{frame}
-% Slut - Opskrifter
+
+%% Controller
+\begin{frame}{Implementering}
+	\framesubtitle{Controller}
+	\begin{itemize}
+		\item CRUD - \texttt{Create()}, \texttt{Index()} og \texttt{Details()}, \texttt{Edit()}, \texttt{Delete()}
+		\item \texttt{DataBaseContext} giver adgang til model-laget
+		\vspace{15pt}
+		\item Tilføje og fjerne varer, tilbud og ingredienser
+		\item Kommunikation med API
+		\item Information til brugere
+	\end{itemize}
+	%Indsæt relevant kode måske? eller tab til VS 
+\end{frame}
+%% View
+\begin{frame}{Implementering}
+	\framesubtitle{View}
+	\begin{itemize}
+		\item Overblik - \texttt{Index.cshtml}
+		\begin{itemize}
+			\item \texttt{foreach} der ittererer over alle objekterne fx indkøbslister
+		\end{itemize}
+		\item Specifik objekter - \texttt{Details.cshtml}
+		\begin{itemize}
+			\item \texttt{foreach} der ittererer over eventuelle lister, som objektet har fx varer på en indkøbsliste
+		\end{itemize}
+		\item Razor tillader C\# i views
+		\item Ajax, json og javascript
+		\item Bootstrap modal, tabs og lignende
+	\end{itemize}
+\end{frame}
