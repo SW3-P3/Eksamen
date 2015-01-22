@@ -25,16 +25,60 @@
 \end{frame}
 
 \begin{frame}{Implementering}
-	\framesubtitle{Indkøbslister}
 	\begin{itemize}
-	\item \href{http://james:8080/ShoppingLists}{Brugerens oplevelse}
+	\item Brugerens oplevelse
 	\vspace{20pt}
-	\item Model - Repræsentation af indkøbslister
+	\item Model - Repræsentation af data
 	\item Controller - Relevant logik
 	\item View - Visualisering
 	\end{itemize}	
 \end{frame}
 
+% Start - Indkøbslister
 \begin{frame}{Indkøbslister}
 	\framesubtitle{Model}
+	\textbf{Indkøbslister} \texttt{ShoppingList.cs}
+	\lstinputlisting{code/model/ShoppingList.cs}	
 \end{frame}
+\begin{frame}{Indkøbslister}
+	\framesubtitle{Model}	
+	\textbf{Varer på indkøbslister} \texttt{Item.cs}
+	\lstinputlisting{code/model/Item.cs}	
+\end{frame}
+
+\begin{frame}{Indkøbslister}
+	\framesubtitle{Controller}
+	\begin{itemize}
+		\item CRUD - \texttt{Create()}, \texttt{Index()} og \texttt{Details()}, \texttt{Edit()}, \texttt{Delete()}
+		\vspace{15pt}
+		\item Tilføje varer - \texttt{AddItem()}
+		\item Slette varer - \texttt{RemoveItem()}
+	\end{itemize}
+\end{frame}
+% Slut - Indkøbslister
+
+% Start - Overvågningsliste
+\begin{frame}{Overvågningsliste}
+	\framesubtitle{Model}
+	\begin{itemize}
+		\item Simpel implementering
+		\item Specialiseret indkøbsliste
+		\item Genkendes på titel - \texttt{\_watchList}
+	\end{itemize}
+\end{frame}
+% Slut - Overvågningsliste
+
+% Start - Tilbud
+\begin{frame}{Tilbud}
+	\framesubtitle{Model}
+	\texttt{Offer.cs}
+	\lstinputlisting{code/model/Offer.cs}	
+\end{frame}
+% Slut - Tilbud
+% Start - Opskrifter
+\begin{frame}{Opskrifter}
+	\framesubtitle{Model}
+	\texttt{Recipe.cs}
+	\lstinputlisting{code/model/Recipe.cs}	
+\end{frame}
+% Slut - Opskrifter
