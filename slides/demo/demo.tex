@@ -1,34 +1,25 @@
-\section{Demonstration}
-\begin{frame}{Indhold}
+\section{Implementering og demonstration}
+\begin{frame}{Implementering og demonstration}
+	\framesubtitle{Indhold}
     \begin{itemize}
-        \item Typisk workflow
-        \item Implementering
-        \item Mobil udgave 
-        \begin{itemize}
+    		\item \textbf{Implementering}
+    		\begin{itemize}
 	    	\item Indkøbslister
 	    	\item Overvågningsliste
 	    	\item Tilbud
 	    	\item Opskrifter
-        \end{itemize}   
+        \end{itemize}
+        \item \textbf{Demonstration} 
+        \begin{itemize}
+        \item Typisk workflow        
+        \item Mobil udgave  
+        \end{itemize}        
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Typisk workflow}
+\begin{frame}{Implementering}
+	\framesubtitle{Indhold}
 	\begin{itemize}
-	\item Oprette bruger
-	\item Bruge indkøbsliste og tilbud
-	\item Finde opskrift og lave min egen
-	\item Ændre mine præferencer
-	\end{itemize}
-	\href{http://james:8080}{Demonstration af ProjectFood}
-\end{frame}
-
-%%%% Implementering
-\section{Implementering}
-\begin{frame}{Indhold}
-	\begin{itemize}
-	\item Brugerens oplevelse
-	\vspace{20pt}
 	\item Model - Repræsentation af data
 	\item Controller - Relevant logik
 	\item View - Visualisering
@@ -46,24 +37,6 @@
 	\framesubtitle{Varer}	
 	\texttt{Item.cs}
 	\lstinputlisting{code/model/Item.cs}	
-\end{frame}
-\begin{frame}{Model}
-	\framesubtitle{Overvågningsliste}
-	\begin{itemize}
-		\item Simpel implementering
-		\item Specialiseret indkøbsliste
-		\item Genkendes på titel  \texttt{\_watchList}
-	\end{itemize}
-\end{frame}
-\begin{frame}{Model}
-	\framesubtitle{Tilbud}
-	\texttt{Offer.cs}
-	\lstinputlisting{code/model/Offer.cs}	
-\end{frame}
-\begin{frame}{Model}
-	\framesubtitle{Opskrifter}
-	\texttt{Recipe.cs}
-	\lstinputlisting{code/model/Recipe.cs}	
 \end{frame}
 
 %% Controller
@@ -87,13 +60,26 @@
 		\item Overblik - \texttt{Index.cshtml}
 		\begin{itemize}
 			\item \texttt{foreach} der ittererer over alle objekterne fx indkøbslister
+			\item F.eks. indkøbslister, tilbud og opskrifter
 		\end{itemize}
 		\item Specifik objekter - \texttt{Details.cshtml}
 		\begin{itemize}
 			\item \texttt{foreach} der ittererer over eventuelle lister, som objektet har fx varer på en indkøbsliste
+			\item F.eks. en indkøbsliste eller opskrift
 		\end{itemize}
 		\item Razor tillader C\# i views
 		\item Ajax, json og javascript
 		\item Bootstrap modal, tabs og lignende
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Demonstration}
+	\framesubtitle{Typisk workflow}
+	\begin{itemize}
+	\item Oprette bruger
+	\item Bruge indkøbsliste og tilbud
+	\item Finde opskrift og lave min egen
+	\item Ændre mine præferencer
+	\end{itemize}
+	\href{http://james:8080}{Demonstration af ProjectFood}
 \end{frame}
