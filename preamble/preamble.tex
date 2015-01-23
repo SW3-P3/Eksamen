@@ -27,6 +27,7 @@
 % Sets the tolerance for distance between words, determining when to hyphenate.
 \pretolerance=2500
 
+\usepackage{rotating}
 
 %%% Figures and tables (Floats) %%%
 % Enable multi-rows and -columns
@@ -110,3 +111,31 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows, positioning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage{color}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+\usepackage{courier}
+\usepackage{listings}
+
+%%% Colour definitions %%%
+% Defines: gray
+\definecolor{gray}{gray}{0.80}
+% Defines: numbercolor
+\definecolor{numbercolor}{gray}{0.7}
+% Defines: shadecolor
+\definecolor{shadecolor}{RGB}{33,26,82}
+% Defines: aaublue
+
+\definecolor{aaublue}{RGB}{33,26,82}
+
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\newcommand*\rot{\rotatebox{90}}
