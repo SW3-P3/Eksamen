@@ -36,39 +36,39 @@
 \end{frame}
 
 %% Model
-\begin{frame}{Implementering}
-	\framesubtitle{Model}
-	\textbf{Indkøbslister} \texttt{ShoppingList.cs}
+\subsection{Model}
+\begin{frame}{Model}
+	\framesubtitle{Indkøbslister}
+	\texttt{ShoppingList.cs}
 	\lstinputlisting{code/model/ShoppingList.cs}	
 \end{frame}
-\begin{frame}{Implementering}
-	\framesubtitle{Model}	
-	\textbf{Varer på indkøbslister} \texttt{Item.cs}
+\begin{frame}{Model}
+	\framesubtitle{Varer}	
+	\texttt{Item.cs}
 	\lstinputlisting{code/model/Item.cs}	
 \end{frame}
-\begin{frame}{Implementering}
-	\framesubtitle{Model}
-	\textbf{Overvågningsliste}
+\begin{frame}{Model}
+	\framesubtitle{Overvågningsliste}
 	\begin{itemize}
 		\item Simpel implementering
 		\item Specialiseret indkøbsliste
 		\item Genkendes på titel  \texttt{\_watchList}
 	\end{itemize}
 \end{frame}
-\begin{frame}{Implementering}
-	\framesubtitle{Model}
-	\textbf{Tilbud} \texttt{Offer.cs}
+\begin{frame}{Model}
+	\framesubtitle{Tilbud}
+	\texttt{Offer.cs}
 	\lstinputlisting{code/model/Offer.cs}	
 \end{frame}
-\begin{frame}{Implementering}
-	\framesubtitle{Model}
-	\textbf{Opskrifter} \texttt{Recipe.cs}
+\begin{frame}{Model}
+	\framesubtitle{Opskrifter}
+	\texttt{Recipe.cs}
 	\lstinputlisting{code/model/Recipe.cs}	
 \end{frame}
 
 %% Controller
-\begin{frame}{Implementering}
-	\framesubtitle{Controller}
+\subsection{Controller}
+\begin{frame}{Controller}
 	\begin{itemize}
 		\item CRUD - \texttt{Create()}, \texttt{Index()} og \texttt{Details()}, \texttt{Edit()}, \texttt{Delete()}
 		\item \texttt{DataBaseContext} giver adgang til model-laget
@@ -79,9 +79,10 @@
 	\end{itemize}
 	%Indsæt relevant kode måske? eller tab til VS 
 \end{frame}
+
 %% View
-\begin{frame}{Implementering}
-	\framesubtitle{View}
+\subsection{View}
+\begin{frame}{View}
 	\begin{itemize}
 		\item Overblik - \texttt{Index.cshtml}
 		\begin{itemize}
