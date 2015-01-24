@@ -1,4 +1,11 @@
 \section{Refleksion}
+\begin{frame}{Indhold}
+  \begin{itemize}
+    \item Konklusion
+    \item Forbedringsforslag
+    \item Udvidelse af systemet
+  \end{itemize}
+\end{frame}
 
 \subsection{Konklusion}
 \begin{frame}{Konklusion}
@@ -7,7 +14,7 @@
   \left[
   \begin{minipage}{\textwidth}
   \centering
-  \begin{minipage}{0.96\textwidth}
+  \begin{minipage}{0.94\textwidth}
   Hvordan designes og implementeres et system, i C\#, der kan give brugere lettere adgang til dagligvarebutikkernes tilbud integreret med indkøbslister og opskrifter imens det gøres mere overskueligt, at handle ind til aftensmad?
   \end{minipage} 
   \end{minipage}                           
@@ -15,27 +22,42 @@
 \]
 \end{frame}
 
+\subsection{Forbedringsforslag}
 
-\begin{frame}{Konklusion}
-  \framesubtitle{Er problemformuleringen løst?}
-
+\begin{frame}{Forbedringsforslag}
+  \framesubtitle{Hvad kunne arbejdes videre på?}
+  \textbf{Billeder}
   \begin{itemize}
-    \item<2-4,6> Lettere adgang til dagligvarebutikkernes tilbud integreret med:
-      \begin{itemize}
-        \item <3,6>Indkøbslister
-        \item <4,6>Opskrifter
-      \end{itemize}
-    \item <5,6>Gøres mere overskueligt, at handle ind til aftensmad
+    \item Opskrifter
+    \item Tilbud
+    \item General grafik
   \end{itemize}
-
 \end{frame}
 
 \begin{frame}{Forbedringsforslag}
   \framesubtitle{Hvad kunne arbejdes videre på?}
+  \textbf{Indkøbslister}
+
+  billede1
+
+  billede2
 \end{frame}
 
-\begin{frame}{Forbedringsforslag - forsat}
+
+\begin{frame}[t]{Forbedringsforslag}
   \framesubtitle{Hvad kunne laves om?}
+  \texttt{Nuværende API-data}
+  \scalebox{0.5}{
+    \lstinputlisting{code/api/old.json}
+  }
+\end{frame}
+
+\begin{frame}[t]{Forbedringsforslag}
+  \framesubtitle{Hvad kunne laves om?}
+  \texttt{Forslag til præcisering af API-data}
+  \scalebox{0.5}{
+    \lstinputlisting{code/api/new.json}
+  }
 \end{frame}
 
 \begin{frame}{Programudvidelse}

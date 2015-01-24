@@ -1,0 +1,20 @@
+{
+    /*[...] */ 
+    "items" : {
+        "category": "Soft drinks",
+        "general_items" : ["Cola", "Cola Light", "Cola Light", "Fruit soda"],
+        "speficic_items": [ "Coca-cola", "Cocla-cola Zero", "Cocla-cola Light", "Fanta Exotic"]
+    },
+    "quantity": {
+        "unit": {
+        "symbol": "l",
+        "si": {
+            "symbol": "l",
+            "factor": 1
+        }
+    },
+    "size": [1.5, 1.5, 1.5 , 1.5]
+    },
+    "pieces": [1, 1, 1, 1]
+    }
+/* [...] *

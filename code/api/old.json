@@ -1,0 +1,27 @@
+{
+    /*[...] */ //ID og ligende
+    "heading": "Coca-cola, Zero, light eller Fanta Exotic",
+    "description": "Ex. pant. 1,5 LITER. 6,67 pr. liter",
+    "catalog_page": 24,
+    "pricing": {
+        "price": 10,
+        "pre_price": 12,
+        "currency": "DKK"
+    },
+    "quantity": {
+        "unit": {
+            "symbol": "l",
+            "si": {
+                "symbol": "l",
+                "factor": 1
+            }
+        },
+        "size": {
+            "from": 1.5,
+            "to": 1.5
+        },
+        "pieces": {
+            "from": 1,
+            "to": 1
+        }
+   /* [...] */ // Billeder og katalog API-del 
