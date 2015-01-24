@@ -1,8 +1,9 @@
 {
     /*[...] */ 
     "items" : {
-        "category": "Soft drinks",
-        "general_items" : ["Cola", "Cola Light", "Cola Light", "Fruit soda"],
+        "category": "Kolonial",
+        "product_group" : "sodavand",
+        "general_items" : ["Cola", "Cola Light", "Cola Light", "Frugt sodavand"],
         "speficic_items": [ "Coca-cola", "Cocla-cola Zero", "Cocla-cola Light", "Fanta Exotic"]
     },
     "quantity": {
