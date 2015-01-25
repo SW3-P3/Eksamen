@@ -1,4 +1,7 @@
 \section{Udvikling af programmet}
+	\begin{frame}{Udvikling af programmet}
+		\LARGE Ved Troels Krøgh
+	\end{frame}
 	\subsection{Arkitektur}
 		\begin{frame}[t]{Arkitektur}\framesubtitle{MVC \& Komponenter}
 			\begin{columns}[T]
@@ -27,10 +30,13 @@
 		
 		\subsubsection{Funktionskomponenter}
 		\begin{frame}[t]{Arkitektur}\framesubtitle{Funktionskomponenter}
-			Komponenter har adgange og afhængighedder til hinanden
+			\begin{itemize}
+				\item Funktionskomponenters adgange og afhængighedder
+				\item Rækkefølge af komponenters implementering
+			\end{itemize}
 			%Topologisk sortering -> omvend reækkefølge -> implementer
 			%Bruger > Tilbud > Indkøbsliste > Overvågning > Opskrift
-			\hspace{-20pt}
+			\vspace{-5pt}
 			\begin{figure}[h!]
 				\centering
 				\includegraphics[width=1\textwidth]{images/Komponenter.png} % trim=1.4cm 6.1cm 6.5cm 1.8cm, clip, 
@@ -39,43 +45,37 @@
 
 		\subsubsection{Modellag}
 			\begin{frame}[t]{Arkitektur}\framesubtitle{Modellag}
-				\begin{columns}[T]
-				
-					\begin{column}{.48\textwidth}
-					\vspace{-29pt}
-						\begin{figure}[h!]
-							\centering
-							\includegraphics[trim=1.4cm 6.1cm 6.5cm 1.8cm, clip, width=1.125\textwidth]{images/PFClasses_2.pdf} % trim=1.4cm 6.1cm 6.5cm 1.8cm
-						\end{figure}
-					\end{column}
-					\begin{column}{.44\textwidth}
-						\begin{itemize}
-							\item Implementering
-							\item Iterationer
-						\end{itemize}
-					\end{column}
-				\end{columns}
+				\begin{figure}
+					
+					\includegraphics<1-2>[trim=8.2cm 16.5cm 0.5cm 6.3cm, clip, width=1\textwidth]{images/PF_Model_UML_Simple.pdf} % ttrim=1.4cm 6.1cm 6.5cm 1.8cm, clip,
+					\includegraphics<3>[width=0.5\textwidth]{images/UML_Pref_med_felter.png} % ttrim=1.4cm 6.1cm 6.5cm 1.8cm, clip,
+
+				\end{figure}
+				\begin{itemize}
+					\item<2> Many-To-Many via bindeklasser med attributter
+					\item<3> Problemer med modellaget
+				\end{itemize}
 			\end{frame}
 
 		\subsection{Teknologier}
 			\begin{frame}[t]{Teknologier} %\framesubtitle{Udvikling intro}
 				\begin{itemize}
-					\item ASP.NET
+					\item<1> ASP.NET
 					\begin{itemize}
-						\item MVC
-						\item Razor view engine
-						\item Login system
+						\item<1> MVC
+						\item<1> Razor view engine
+						\item<1> Login system
 					\end{itemize}
-					\item Entity Framework
+					\item<2> Entity Framework
 					\begin{itemize}
-						\item Object--relational mapping
-						\item Code--first
-						\item Migrations
+						\item<2> Object--relational mapping
+						\item<2> Code--first
+						\item<2> Migrations
 					\end{itemize}
-					\item Bootstrap
+					\item<3> Bootstrap
 					\begin{itemize}
-						\item Responsiv layout
-						\item CSS--klasser og JS
+						\item<3> Responsiv layout
+						\item<3> CSS--klasser og JS
 					\end{itemize}
 				\end{itemize}
 			\end{frame}
@@ -84,22 +84,21 @@
 			\begin{frame}[t]{Teknologier} \framesubtitle{eTilbudsavis API}
 			Kommunikation med API'en:
 				\begin{enumerate}
-					\item POST api.etilbudsavis.dk/v2/\textbf{sessions}?api\_key=[...]
+					\item<1> POST api.etilbudsavis.dk/v2/\textbf{sessions}?api\_key=[...]
 					\begin{itemize}
-						\item Modtag \texttt{token}
-						\item Beregn \texttt{signature} (SHA-256)
+						\item<1> Modtag \texttt{token}
+						\item<1> Beregn \texttt{signature} (SHA-256)
 					\end{itemize}
-					\item GET api.etilbudsavis.dk/v2/\textbf{offers}?r\_lat=57\&r\_lng=9
+					\item<2> GET api.etilbudsavis.dk/v2/\textbf{offers}?r\_lat=57\&r\_lng=9
 					\begin{itemize}
-						\item Modtager 100 tilbud som JSON
-						\item Gentages til alle er modtaget (do..while)
-						\item Konverteres til \texttt{Offer}--klassen
+						\item<2> Modtager 100 tilbud som JSON
+						\item<2> Gentages til alle er modtaget (do..while)
+						\item<2> Konverteres til \texttt{Offer}--klassen
 					\end{itemize}
 				\end{enumerate}
 				\begin{itemize}
-					\item Er tidskrævende (60-300 sekunder)
-					\item Kan muligvis paralelliseres for bedre hastighed
-					\item Dataet kunne være bedre
-					\item Bliver filteret inden visning
+					\item<3> Er tidskrævende (60-300 sekunder)
+					\item<3> Kan muligvis paralelliseres for bedre hastighed
+					\item<3> Dataet kunne være bedre
 				\end{itemize}
 			\end{frame}
