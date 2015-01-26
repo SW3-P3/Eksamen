@@ -8,7 +8,7 @@
 |/
 * Specialiserede metoder
 |\
-| * AddItemToShoppingList()
+| * RemoveItemFrom()
 | |
 | * GetOffersForItem()
 |/ 
