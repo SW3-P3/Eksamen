@@ -7,15 +7,15 @@
 | * CRUD i shoppinglist
 |/
 * Specialiserede metoder
+|
+* Kommunikation med API
+|
+* Information til brugere 
 |\
 | * RemoveItemFrom()
 | |
 | * GetOffersForItem()
 |/ 
-* Kommunikation med API
-|
-* Information til brugere   
-|
 * View
 |
 * Demonstration
