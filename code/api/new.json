@@ -4,7 +4,7 @@
         "category": "Kolonial",
         "product_group" : "sodavand",
         "general_items" : ["Cola", "Cola Light", "Cola Light", "Frugt sodavand"],
-        "speficic_items": [ "Coca-cola", "Cocla-cola Zero", "Cocla-cola Light", "Fanta Exotic"]
+        "speficic_items": [ "Coca-cola", "Coca-cola Zero", "Coca-cola Light", "Fanta Exotic"]
     },
     "quantity": {
         "unit": {
